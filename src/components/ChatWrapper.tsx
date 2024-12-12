@@ -7,7 +7,7 @@ import {useRouter} from "next/navigation";
 
 export const ChatWrapper = ({sessionId, initialMessages}: { sessionId: string, initialMessages: Message[] }) => {
     const router = useRouter();
-    const {messages, handleInputChange, handleSubmit, input, setInput} = useChat({
+    const {isLoading, messages, handleInputChange, handleSubmit, input, setInput} = useChat({
         api: "/api/chat-stream",
         body: {sessionId},
         initialMessages,
@@ -27,7 +27,9 @@ export const ChatWrapper = ({sessionId, initialMessages}: { sessionId: string, i
                 input={input}
                 handleInputChange={handleInputChange}
                 handleSubmit={handleSubmit}
-                setInput={setInput}/>
+                setInput={setInput}
+                isLoading={isLoading}
+            />
         </div>
     )
 }

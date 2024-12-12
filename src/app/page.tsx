@@ -57,7 +57,7 @@ const Home: React.FC = () => {
             <div
                 className="pt-24 flex flex-col absolute items-center justify-center w-full h-full sm:pt-32 px-4 sm:px-6">
                 <p className="text-zinc-400 max-w-full sm:max-w-lg mx-auto mb-8 text-center">
-                    Enter any webpage URL below, and you'll be redirected to chat with our AI chatbot. The bot will
+                    Enter any webpage URL below, and you will be redirected to chat with our AI chatbot. The bot will
                     provide
                     detailed insights and information about the webpage you entered.
                 </p>
