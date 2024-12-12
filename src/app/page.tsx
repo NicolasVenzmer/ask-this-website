@@ -57,7 +57,7 @@ const Home: React.FC = () => {
             <div
                 className="pt-24 flex flex-col absolute items-center justify-center w-full h-full sm:pt-32 px-4 sm:px-6">
                 <h2 className="text-center text-3xl sm:text-4xl font-bold text-zinc-200 break-words sm:break-normal mb-8">
-                    Let's <span className="text-blue-500">Dive In</span>
+                    Let&apos;s <span className="text-blue-500">Dive In</span>
                 </h2>
                 <p className="text-zinc-400 max-w-full sm:max-w-lg mx-auto mb-8 text-center">
                     Enter a website below, and Milo will be ready to chat and provide insights about the site!
