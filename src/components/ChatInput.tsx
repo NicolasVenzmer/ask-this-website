@@ -15,7 +15,6 @@ interface ChatInputProps {
     handleInputChange: HandleInputChange,
     handleSubmit: HandleSubmit,
     setInput: SetInput,
-    handleGoHome: () => void,
     isLoading: boolean,
 }
 
@@ -24,20 +23,11 @@ export const ChatInput = ({
                               input,
                               handleSubmit,
                               setInput,
-                              handleGoHome,
                               isLoading
                           }: ChatInputProps) => {
     return (
         <div className="z-10 bg-zinc-900 absolute bottom-0 left-0 w-full">
             <div className="mx-2 flex flex-row gap-3 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-2xl xl:max-w-3xl">
-                <Button
-                    size="sm"
-                    type="button"
-                    onPress={handleGoHome}
-                    className="absolute z-10 border border-border bg-zinc-900 right-2 bottom-2"
-                >
-                    <Home className="size-5"/>
-                </Button>
                 <div className="relative flex h-full flex-1 items-stretch md:flex-col">
                     <div className="relative flex flex-col w-full flex-grow p-4">
                         <form onSubmit={handleSubmit} className="relative">
