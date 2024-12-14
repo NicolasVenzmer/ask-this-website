@@ -7,7 +7,7 @@ export const Login = () => {
         <div
             className="pt-24 flex flex-col flex-1 items-center justify-center w-full h-full sm:pt-32 px-4 sm:px-6">
             <h2 className="text-center text-3xl sm:text-4xl font-bold text-zinc-200 break-words sm:break-normal mb-8">
-                Welcome! Please <span className="text-blue-500">Sign In</span> To Continue.
+                Welcome! <span className="text-blue-500">Sign In</span> To Continue.
             </h2>
             <p className="text-zinc-400 max-w-full sm:max-w-lg mx-auto mb-8 text-center">
                 To access all the features and personalize your experience, we need you to sign in. It&apos;s quick and
