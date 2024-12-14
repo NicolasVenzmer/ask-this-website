@@ -2,7 +2,7 @@
 
 import {Textarea} from "@nextui-org/input";
 import {Button} from "@nextui-org/react";
-import {Send, Home} from "lucide-react";
+import {Send} from "lucide-react";
 import {type useChat} from "ai/react"
 import React from "react";
 

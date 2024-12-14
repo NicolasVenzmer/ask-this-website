@@ -37,7 +37,7 @@ export const Header = () => {
                         <Image
                             onClick={handleSignOut}
                             className="rounded-full bg-color-none hover:bg-zinc-700 hover:cursor-pointer"
-                            src={session?.user?.image}
+                            src={session?.user?.image as string}
                             height={35}
                             width={35}
                             alt="user-image"
