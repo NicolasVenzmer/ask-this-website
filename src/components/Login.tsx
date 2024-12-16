@@ -2,6 +2,7 @@
 import {signIn} from "next-auth/react";
 import GoogleIcon from "../../public/icons/google-icon.png";
 import React, {useState} from "react";
+import Image from "next/image";
 
 export const Login = () => {
     const [loading, setLoading] = useState(false);
@@ -49,11 +50,7 @@ export const Login = () => {
                         </div>
                     ) : (
                         <>
-                            <img
-                                src={GoogleIcon.src}
-                                alt="Google Icon"
-                                className="w-6 h-6 mr-3"
-                            />
+                            <Image src={GoogleIcon} alt="Google Icon" width={24} height={24} className="w-6 h-6 mr-3"/>
                             Sign In with Google
                         </>
                     )}
