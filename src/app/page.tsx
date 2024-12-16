@@ -3,9 +3,28 @@ import React, {useState} from "react";
 import {useRouter} from "next/navigation";
 import {useSession} from "next-auth/react";
 import {Header} from "@/components/Header";
+import {Session} from "next-auth";
+
+interface UserNameProps {
+    session?: Session | null;
+    status?: string;
+}
+
+const UserName = ({session, status}: UserNameProps) => {
+    if (status === "loading") {
+        return <div className="h-6 w-32 bg-zinc-700 animate-pulse rounded"></div>;
+    }
+    return (
+        session && (
+            <h2 className="text-center text-3xl sm:text-4xl font-bold text-zinc-200 break-words sm:break-normal mb-8">
+                {session?.user?.name} <br/> Let&apos;s <span className="text-blue-500">Dive In</span>!
+            </h2>
+        )
+    );
+};
 
 const Home: React.FC = () => {
-    const {data: session} = useSession();
+    const {data: session, status} = useSession();
     const [url, setUrl] = useState("");
     const [loading, setLoading] = useState(false);
     const router = useRouter();
@@ -25,10 +44,8 @@ const Home: React.FC = () => {
         <div className="relative min-h-screen bg-zinc-900 text-zinc-100 flex flex-col">
             <Header/>
             <div
-                className="pt-24 flex flex-col flex-1 items-center justify-center w-full h-full sm:pt-32 px-4 sm:px-6">
-                <h2 className="text-center text-3xl sm:text-4xl font-bold text-zinc-200 break-words sm:break-normal mb-8">
-                    {session?.user?.name} <br/> Let&apos;s <span className="text-blue-500">Dive In</span>!
-                </h2>
+                className="flex flex-col flex-1 items-center justify-center w-full h-full px-4">
+                <UserName session={session} status={status}/>
                 <p className="text-zinc-400 max-w-full sm:max-w-lg mx-auto mb-8 text-center">
                     Enter a website below, and Milo will be ready to chat and provide insights about the site!
                 </p>
