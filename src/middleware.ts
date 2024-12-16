@@ -7,8 +7,6 @@ export async function middleware(req: NextRequest) {
     const cookie = req.cookies.get("sessionId");
     const {pathname} = req.nextUrl;
 
-    console.log("pathname", pathname);
-
     if (
         pathname.startsWith('/api/auth/') ||
         pathname.startsWith('/_next/')
