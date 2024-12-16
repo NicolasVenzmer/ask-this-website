@@ -1,5 +1,6 @@
 "use client"
 import {signIn} from "next-auth/react";
+import GoogleIcon from "../../public/icons/google-icon.png";
 import React from "react";
 
 export const Login = () => {
@@ -19,10 +20,15 @@ export const Login = () => {
             >
                 <button
                     onClick={() => signIn("google")}
-                    type="submit"
-                    className="w-full px-4 py-2 bg-zinc-600 hover:bg-zinc-500 text-zinc-100 font-medium rounded-md transition-colors duration-200"
+                    type="button"
+                    className="flex items-center justify-center w-full h-12 bg-zinc-700 hover:bg-zinc-600 text-zinc-100 font-medium rounded-md transition-colors duration-200"
                 >
-                    Sign In
+                    <img
+                        src={GoogleIcon.src}
+                        alt="Google Icon"
+                        className="w-6 h-6 mr-3"
+                    />
+                    Sign In with Google
                 </button>
             </div>
         </div>
