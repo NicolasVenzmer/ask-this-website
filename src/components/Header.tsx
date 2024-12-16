@@ -23,7 +23,7 @@ export const Header = () => {
                         Meet &lt;<span className="text-blue-500">Milo</span>/&gt;
                     </h1>
                 </a>
-                <nav className="flex flex-col sm:flex-row gap-4 mt-4 sm:mt-0 items-center justify-center">
+                <nav className="flex flex-row sm:flex-row gap-4 mt-4 sm:mt-0 items-center justify-center flex-wrap">
                     <div className="relative group">
                         <Button onPress={handlePortfolio} className="group-hover:bg-transparent">
                             <Briefcase/>
@@ -51,4 +51,4 @@ export const Header = () => {
             </div>
         </header>
     );
-}
+};
