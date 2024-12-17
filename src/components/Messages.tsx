@@ -20,7 +20,7 @@ export const Messages = ({messages}: MessagesProps) => {
     return (
         <div
             ref={containerRef}
-            className="flex flex-col overflow-y-auto max-h-[calc(100vh-15rem)]"
+            className="flex flex-col overflow-y-auto"
         >
             {messages.length ? (
                 messages.map((message, i) => (

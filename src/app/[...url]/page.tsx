@@ -35,11 +35,7 @@ const Page = async ({params}: PageProps) => {
     return (
         <div className="min-h-screen flex flex-col">
             <Header/>
-            <div className="flex-1 flex flex-col">
-                <div className="flex-1 overflow-hidden">
-                    <ChatWrapper sessionId={sessionId} initialMessages={initialMessages}/>
-                </div>
-            </div>
+            <ChatWrapper sessionId={sessionId} initialMessages={initialMessages}/>
         </div>
     );
 };

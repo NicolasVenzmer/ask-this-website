@@ -12,19 +12,18 @@ export const ChatWrapper = ({sessionId, initialMessages}: { sessionId: string, i
     })
 
     return (
-        <div className="flex flex-col min-h-[calc(100vh-3.5rem-7rem)] bg-zinc-900">
-            <div className="flex-1 bg-zinc-800 flex flex-col divide-y divide-zinc-700">
-                <div className="flex-1 overflow-y-auto">
-                    <Messages messages={messages}/>
-                </div>
-                <ChatInput
-                    input={input}
-                    handleInputChange={handleInputChange}
-                    handleSubmit={handleSubmit}
-                    setInput={setInput}
-                    isLoading={isLoading}
-                />
+        <div className="flex flex-col flex-1 bg-zinc-900">
+            <div
+                className="flex-1 overflow-y-auto max-h-[calc(100vh-16rem)]  sm:max-h-[calc(100vh-17rem)] divide-y divide-zinc-700">
+                <Messages messages={messages}/>
             </div>
+            <ChatInput
+                input={input}
+                handleInputChange={handleInputChange}
+                handleSubmit={handleSubmit}
+                setInput={setInput}
+                isLoading={isLoading}
+            />
         </div>
     )
 }
