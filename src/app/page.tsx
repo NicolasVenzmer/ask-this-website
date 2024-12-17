@@ -41,8 +41,9 @@ const UserName = ({session, status}: UserNameProps) => {
 const Home: React.FC = () => {
     const {data: session, status} = useSession();
     const [url, setUrl] = useState("");
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState<boolean>(false)
     const router = useRouter();
+    const [selectedCard, setSelectedCard] = useState<boolean | string>(false);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -56,6 +57,7 @@ const Home: React.FC = () => {
     };
 
     const handleCard = (link: string) => {
+        setSelectedCard(link);
         const redirectUrl = `/${link}`;
         router.push(redirectUrl);
     };
@@ -70,10 +72,32 @@ const Home: React.FC = () => {
                     {newsCards.map((card) => (
                         <div
                             key={card.link}
-                            className="bg-zinc-800 p-4 rounded-lg shadow-md cursor-pointer hover:bg-zinc-700 transition-colors"
+                            className={`bg-zinc-800 p-4 rounded-lg shadow-md cursor-pointer hover:bg-zinc-700 transition-colors ${
+                                selectedCard === card.link ? "pointer-events-none opacity-75" : ""
+                            }`}
                             onClick={() => handleCard(card.link)}
                         >
-                            <h3 className="text-lg font-semibold text-zinc-200 mb-2">{card.title}</h3>
+                            {selectedCard === card.link ? (
+                                <div className="flex justify-center items-center h-full">
+                                    <svg
+                                        className="animate-spin h-6 w-6 text-blue-500"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    >
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+                                        <path d="M4 12a8 8 0 0 1 16 0" fill="none"/>
+                                    </svg>
+                                </div>
+                            ) : (
+                                <h3 className="text-lg font-semibold text-zinc-200 mb-2">
+                                    {card.title}
+                                </h3>
+                            )}
                         </div>
                     ))}
                 </div>
