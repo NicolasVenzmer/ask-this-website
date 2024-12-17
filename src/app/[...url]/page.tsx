@@ -3,16 +3,12 @@ import {redis} from "@/lib/redis";
 import {ChatWrapper} from "@/components/ChatWrapper";
 import {cookies} from "next/headers";
 import {Header} from "@/components/Header";
+import {reconstructUrl} from "@/lib/utils";
 
 interface PageProps {
     params: {
         url: string | string [] | undefined
     }
-}
-
-function reconstructUrl({url}: { url: string[] }) {
-    const decodedComponents = url.map((component) => decodeURIComponent(component));
-    return decodedComponents.join("/");
 }
 
 const Page = async ({params}: PageProps) => {
