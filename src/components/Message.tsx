@@ -1,5 +1,4 @@
 import {cn} from "@/lib/utils";
-import {Bot} from "lucide-react";
 import UserAvatar from "@/components/UserAvatar";
 import BotIcon from "../../public/icons/bot-icon.png";
 import {signOut} from "next-auth/react";
