@@ -1,7 +1,10 @@
 import {cn} from "@/lib/utils";
 import {Bot} from "lucide-react";
 import UserAvatar from "@/components/UserAvatar";
+import BotIcon from "../../public/icons/bot-icon.png";
 import {signOut} from "next-auth/react";
+import Image from "next/image";
+import React from "react";
 
 interface MessageProps {
     content: string
@@ -18,13 +21,17 @@ export const Message = ({content, isUserMessage}: MessageProps) => {
                 <div
                     className={cn("size-10 shrink-0 aspect-square rounded-full border border-blue-300 gb-zinc-900 flex justify-center items-center",
                         {
-                            "bg-zinc-950 border-zinc-950s text-zinc-200": isUserMessage
+                            "bg-zinc-950 text-zinc-200": isUserMessage
                         },
                         {
                             "bg-blue-500": !isUserMessage
                         }
                     )}>
-                    {isUserMessage ? <UserAvatar onSignOut={signOut}/> : <Bot className="size-5 text-white"/>}
+                    {isUserMessage ? <UserAvatar onSignOut={signOut}/> : <Image
+                        className="text-white"
+                        src={BotIcon}
+                        alt="bot-image"
+                    />}
                 </div>
                 <div className="flex flex-col ml-6 w-full">
                     <div className="flex items-center space-x-2">
