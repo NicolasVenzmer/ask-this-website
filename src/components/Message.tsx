@@ -20,7 +20,7 @@ export const Message = ({content, isUserMessage}: MessageProps) => {
                 <div
                     className={cn("size-10 shrink-0 aspect-square rounded-full border border-blue-300 gb-zinc-900 flex justify-center items-center",
                         {
-                            "bg-zinc-950 text-zinc-200": isUserMessage
+                            "bg-zinc-950 text-zinc-200 border-none": isUserMessage
                         },
                         {
                             "bg-blue-500": !isUserMessage
