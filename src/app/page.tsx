@@ -12,16 +12,16 @@ interface UserNameProps {
 
 const newsCards = [
     {
-        title: "OpenAI Rolls Out ChatGPT Search Features to All Users",
-        link: "https://www.bloomberg.com/news/articles/2024-12-16/openai-rolls-out-chatgpt-search-features-to-all-users?srnd=phx-technology"
+        title: "Could this be what our home on Moon or Mars might look like?",
+        link: "https://www.bbc.com/news/articles/c4g23rjq8qro"
     },
     {
-        title: "MicroStrategy Buys More Bitcoin Ahead of Joining Nasdaq 100",
-        link: "https://www.bloomberg.com/news/articles/2024-12-16/microstrategy-buys-more-bitcoin-ahead-of-joining-nasdaq-100?srnd=phx-technology"
+        title: "The controversial machine sending CO2 to the ocean and making hydrogen",
+        link: "https://www.bbc.com/future/article/20241217-the-controversial-machine-using-marine-carbon-removal-to-store-co2-in-the-ocean"
     },
     {
-        title: "TikTok CEO Chew Met Trump at Mar-a-Lago Ahead of US Ban",
-        link: "https://www.bloomberg.com/news/articles/2024-12-16/tiktok-ceo-chew-met-trump-at-mar-a-lago-ahead-of-us-ban?srnd=phx-technology"
+        title: "'World-first' AI camera targets drink-drivers",
+        link: "https://www.bbc.com/news/articles/cj0rqz003zdo"
     },
 ];
 
