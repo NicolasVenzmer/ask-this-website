@@ -20,7 +20,7 @@ export const Header = () => {
             <div className="max-w-7xl mx-auto flex sm:flex-row justify-between items-center px-4 py-4 sm:px-8 ">
                 <a href="/">
                     <h1 className="text-center text-3xl sm:text-4xl font-bold text-zinc-200 break-words sm:break-normal">
-                        Meet &lt;<span className="text-blue-500">Milo</span>/&gt;
+                        &lt;<span className="text-blue-500">Milo</span>/&gt;
                     </h1>
                 </a>
                 <div className="flex sm:flex-row gap-4 items-center justify-center h-full">
