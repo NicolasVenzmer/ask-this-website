@@ -22,13 +22,13 @@ export default async function RootLayout({children,}: Readonly<{ children: React
         <body
             className={cn(inter.className, "min-h-screen antialiased")}
         >
-        <SessionProvider session={session}>
-            <Providers>
+        <Providers>
+            <SessionProvider session={session}>
                 <main className="h-screen dark text-foreground bg-background">
                     {children}
                 </main>
-            </Providers>
-        </SessionProvider>
+            </SessionProvider>
+        </Providers>
         </body>
         </html>
     );
