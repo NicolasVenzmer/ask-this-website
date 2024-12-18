@@ -68,6 +68,7 @@ const Home: React.FC = () => {
             <div
                 className="flex flex-col flex-1 items-center justify-evenly w-full h-full px-4">
                 <UserName session={session} status={status}/>
+                <p>Tech Examples: Explore the Latest News</p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-4xl">
                     {newsCards.map((card) => (
                         <div
